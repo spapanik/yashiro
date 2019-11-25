@@ -14,7 +14,7 @@ sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER", "TEST
 
 [tool.poetry]
 name = "yashiro"
-version = "0.1.0"
+version = "0.2.0"
 description = "A cli template tool based on jinja"
 authors = ["spapanik <spapanik21@gmail.com>"]
 
@@ -34,7 +34,7 @@ classifiers = [
 ]
 
 [tool.poetry.scripts]
-yashiro = "yashiro.main:main"
+yashiro = "yashiro.main:write_output"
 
 [tool.poetry.dependencies]
 python = "^3.6"

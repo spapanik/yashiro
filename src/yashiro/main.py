@@ -31,9 +31,13 @@ def parse_args():
     return parser.parse_args()
 
 
-def main():
+def get_output():
     args = parse_args()
     if args.version is True:
         return f"Yashiro {__version__}"
     parser = Parser(args.template, args.json)
     return parser()
+
+
+def write_output():
+    print(get_output())

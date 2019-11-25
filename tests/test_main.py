@@ -9,7 +9,7 @@ class TestMain:
     def test_version(mocked_args_parser):
         args = mocked_args_parser()
         args.version = True
-        assert main.main().startswith("Yashiro ")
+        assert main.get_output().startswith("Yashiro ")
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
@@ -18,4 +18,4 @@ class TestMain:
         args.template = data_path("test.template")
         args.json = data_path("test.json")
         expected = "Three cards:\n1. None\n1. 42\n1. "
-        assert main.main() == expected
+        assert main.get_output() == expected

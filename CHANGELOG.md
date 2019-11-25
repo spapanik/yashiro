@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.2.0] - 2019-11-25
+### Fixed
+- output the result to stdout
+
 ## [0.1.0] - 2019-11-22
 ### Added
 - parse templates
