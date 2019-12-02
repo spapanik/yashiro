@@ -3,7 +3,7 @@ import json
 
 import jinja2
 
-from . import __version__
+from yashiro import __version__
 
 
 class Parser:
