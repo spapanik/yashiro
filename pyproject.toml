@@ -16,7 +16,9 @@ sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "TESTS"]
 name = "yashiro"
 version = "0.2.0"
 description = "A cli template tool based on jinja"
-authors = ["spapanik <spapanik21@gmail.com>"]
+authors = [
+    "Stephanos Kuma <spapanik21@gmail.com>",
+]
 
 license = "MIT"
 readme = "README.md"
@@ -28,9 +30,9 @@ keywords = ["templates"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: MIT License",
-    "Intended Audience :: Developers",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3 :: Only",
+    "Intended Audience :: Developers",
 ]
 
 [tool.poetry.scripts]
