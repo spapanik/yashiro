@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 
 import jinja2
 
@@ -10,8 +11,10 @@ class Parser:
     def __init__(self, template_path, json_path):
         with open(template_path) as file:
             self.template = jinja2.Template(file.read())
-        with open(json_path) as file:
-            self.json = json.load(file)
+        self.json = dict(os.environ)
+        if json_path is not None:
+            with open(json_path) as file:
+                self.json.update(json.load(file))
 
     def __call__(self):
         return self.template.render(self.json)
