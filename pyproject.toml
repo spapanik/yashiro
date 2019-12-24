@@ -14,7 +14,7 @@ sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "TESTS"]
 
 [tool.poetry]
 name = "yashiro"
-version = "0.2.0"
+version = "0.3.0"
 description = "A cli template tool based on jinja"
 authors = [
     "Stephanos Kuma <spapanik21@gmail.com>",
