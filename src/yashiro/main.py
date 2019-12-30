@@ -25,19 +25,21 @@ def parse_args():
         prog="yashiro",
         description="A utility to manage testing and migrating a database",
     )
-    parser.add_argument("-j", "--json", help="The path to the json file")
-    parser.add_argument("-t", "--template", help="The path to the template")
     parser.add_argument(
-        "-V", "--version", action="store_true", help="Print the version and exit"
+        "-V",
+        "--version",
+        action="version",
+        version=f"%(prog)s {__version__}",
+        help="Print the version and exit",
     )
+    parser.add_argument("-j", "--json", help="The path to the json file")
+    parser.add_argument("-t", "--template", required=True, help="The path to the template")
 
     return parser.parse_args()
 
 
 def get_output():
     args = parse_args()
-    if args.version is True:
-        return f"Yashiro {__version__}"
     parser = Parser(args.template, args.json)
     return parser()
 
