@@ -33,7 +33,9 @@ def parse_args():
         help="Print the version and exit",
     )
     parser.add_argument("-j", "--json", help="The path to the json file")
-    parser.add_argument("-t", "--template", required=True, help="The path to the template")
+    parser.add_argument(
+        "-t", "--template", required=True, help="The path to the template"
+    )
 
     return parser.parse_args()
 
