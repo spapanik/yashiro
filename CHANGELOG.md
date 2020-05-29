@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog][clog], and this project adheres to [Se
 
 ## [0.1.0] - 2019-11-22
 ### Added
-- Add a template parser
+- Added a template parser
 
 
 [unreleased]: https://github.com/spapanik/yashiro/compare/v0.3.0...master
