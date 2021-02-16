@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog][clog], and this project adheres to [Se
 
 ## [0.3.0] - 2019-12-24
 ### Added
-- Env vars can now the default values of the template variables
+- Env vars are now the default values of the template variables
 
 ## [0.2.0] - 2019-11-25
 ### Changed
