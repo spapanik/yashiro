@@ -1,7 +1,7 @@
 <p align="center">
-<a href="https://travis-ci.org/spapanik/yashiro"><img alt="Build" src="https://travis-ci.org/spapanik/yashiro.svg?branch=master"></a>
-<a href="https://coveralls.io/github/spapanik/yashiro"><img alt="Coverage" src="https://coveralls.io/repos/github/spapanik/yashiro/badge.svg?branch=master"></a>
-<a href="https://github.com/spapanik/yashiro/blob/master/LICENSE.txt"><img alt="License" src="https://img.shields.io/github/license/spapanik/yashiro"></a>
+<a href="https://travis-ci.org/spapanik/yashiro"><img alt="Build" src="https://travis-ci.org/spapanik/yashiro.svg?branch=main"></a>
+<a href="https://coveralls.io/github/spapanik/yashiro"><img alt="Coverage" src="https://coveralls.io/repos/github/spapanik/yashiro/badge.svg?branch=main"></a>
+<a href="https://github.com/spapanik/yashiro/blob/main/LICENSE.txt"><img alt="License" src="https://img.shields.io/github/license/spapanik/yashiro"></a>
 <a href="https://pypi.org/project/yashiro"><img alt="PyPI" src="https://img.shields.io/pypi/v/yashiro"></a>
 <a href="https://pepy.tech/project/yashiro"><img alt="Downloads" src="https://pepy.tech/badge/yashiro"></a>
 <a href="https://github.com/psf/black"><img alt="Code style" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
