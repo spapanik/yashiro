@@ -23,7 +23,7 @@ class Parser:
 def parse_args():
     parser = argparse.ArgumentParser(
         prog="yashiro",
-        description="A utility to manage testing and migrating a database",
+        description="A cli wrapper for jinja templates",
     )
     parser.add_argument(
         "-V",
