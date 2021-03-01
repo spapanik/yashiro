@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog][clog], and this project adheres to [Se
 
 ## [Unreleased]
 
+### Added
+- Added an option to disallow undefined variables in templates
+
 ## [0.3.0] - 2019-12-24
 ### Added
 - Env vars are now the default values of the template variables

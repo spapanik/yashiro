@@ -8,10 +8,14 @@ from yashiro import __version__
 
 
 class Parser:
-    def __init__(self, template_path, json_path):
-        with open(template_path) as file:
-            self.template = jinja2.Template(file.read())
+    def __init__(self, args):
+        extra = {}
+        if args.strict:
+            extra["undefined"] = jinja2.StrictUndefined
+        with open(args.template) as file:
+            self.template = jinja2.Template(file.read(), **extra)
         self.json = dict(os.environ)
+        json_path = args.json
         if json_path is not None:
             with open(json_path) as file:
                 self.json.update(json.load(file))
@@ -23,7 +27,7 @@ class Parser:
 def parse_args():
     parser = argparse.ArgumentParser(
         prog="yashiro",
-        description="A cli wrapper for jinja templates",
+        description="A utility to manage testing and migrating a database",
     )
     parser.add_argument(
         "-V",
@@ -34,6 +38,9 @@ def parse_args():
     )
     parser.add_argument("-j", "--json", help="The path to the json file")
     parser.add_argument(
+        "-s", "--strict", action="store_true", help="Disallow missing arguments"
+    )
+    parser.add_argument(
         "-t", "--template", required=True, help="The path to the template"
     )
 
@@ -42,7 +49,7 @@ def parse_args():
 
 def get_output():
     args = parse_args()
-    parser = Parser(args.template, args.json)
+    parser = Parser(args)
     return parser()
 
 
