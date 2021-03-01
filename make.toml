@@ -1,7 +1,7 @@
 ["$globals"]
 vars = [
-    {"pytest_args" = "--cov -vv"},
-    {"pytest_path" = "tests/"},
+    {"pytest_args" = ""},
+    {"pytest_path" = ""},
     {"poetry_extra" = ""},
 ]
 
