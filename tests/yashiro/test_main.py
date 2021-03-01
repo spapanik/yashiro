@@ -11,7 +11,9 @@ class TestMain:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.json = data_path("test.json")
-        expected = "Three cards:\n1. None\n1. 42\n1. "
+        args.strict = False
+        os.environ.clear()
+        expected = "Three cards:\n1. None\n2. 42\n3. missing"
         assert main.get_output() == expected
 
     @staticmethod
@@ -20,10 +22,11 @@ class TestMain:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.json = None
+        args.strict = False
         os.environ.clear()
         os.environ["that"] = "3.14159"
-        os.environ["other"] = "Hello, world!"
-        expected = "Three cards:\n1. \n1. 3.14159\n1. Hello, world!"
+        os.environ["the_other"] = "Hello, world!"
+        expected = "Three cards:\n1. \n2. 3.14159\n3. Hello, world!"
         assert main.get_output() == expected
 
     @staticmethod
@@ -32,8 +35,9 @@ class TestMain:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.json = data_path("test.json")
+        args.strict = False
         os.environ.clear()
         os.environ["that"] = "3.14159"
-        os.environ["other"] = "Hello, world!"
-        expected = "Three cards:\n1. None\n1. 42\n1. Hello, world!"
+        os.environ["the_other"] = "Hello, world!"
+        expected = "Three cards:\n1. None\n2. 42\n3. missing"
         assert main.get_output() == expected
