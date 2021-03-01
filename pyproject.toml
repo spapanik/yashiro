@@ -17,7 +17,7 @@ source = ["src/"]
 
 [tool.poetry]
 name = "yashiro"
-version = "0.3.0"
+version = "0.4.0"
 description = "A cli template tool based on jinja"
 authors = [
     "Stephanos Kuma <stephanos@kuma.ai>",

@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog][clog], and this project adheres to [Se
 
 ## [Unreleased]
 
+## [0.4.0] - 2021-03-01
 ### Added
 - Added an option to disallow undefined variables in templates
 
@@ -21,7 +22,8 @@ The format is based on [Keep a Changelog][clog], and this project adheres to [Se
 - Added a template parser
 
 
-[unreleased]: https://github.com/spapanik/yashiro/compare/v0.3.0...main
+[unreleased]: https://github.com/spapanik/yashiro/compare/v0.4.0...main
+[0.4.0]: https://github.com/spapanik/yashiro/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/spapanik/yashiro/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/spapanik/yashiro/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/spapanik/yashiro/releases/tag/v0.1.0
