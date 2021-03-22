@@ -8,7 +8,7 @@ from yashiro import __version__
 
 
 class Parser:
-    __slots__ = ["template", "json"]
+    __slots__ = ["template", "mapping"]
 
     def __init__(self, args):
         extra = {}
@@ -16,14 +16,14 @@ class Parser:
             extra["undefined"] = jinja2.StrictUndefined
         with open(args.template) as file:
             self.template = jinja2.Template(file.read(), **extra)
-        self.json = dict(os.environ)
+        self.mapping = dict(os.environ)
         json_path = args.json
         if json_path is not None:
             with open(json_path) as file:
-                self.json.update(json.load(file))
+                self.mapping.update(json.load(file))
 
     def __call__(self):
-        return self.template.render(self.json)
+        return self.template.render(self.mapping)
 
 
 def parse_args():
