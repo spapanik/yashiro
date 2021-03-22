@@ -8,6 +8,8 @@ from yashiro import __version__
 
 
 class Parser:
+    __slots__ = ["template", "json"]
+
     def __init__(self, args):
         extra = {}
         if args.strict:
