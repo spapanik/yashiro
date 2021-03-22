@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog][clog], and this project adheres to [Se
 
 ## [Unreleased]
 
+### Added
+- Added an option to allow variables in toml files
+
 ## [0.4.0] - 2021-03-01
 ### Added
 - Added an option to disallow undefined variables in templates

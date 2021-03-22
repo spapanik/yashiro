@@ -3,6 +3,7 @@ import json
 import os
 
 import jinja2
+import tomlkit
 
 from yashiro import __version__
 
@@ -21,6 +22,11 @@ class Parser:
         if json_path is not None:
             with open(json_path) as file:
                 self.mapping.update(json.load(file))
+        toml_path = args.toml
+        if toml_path is not None:
+            with open(toml_path) as file:
+                payload = tomlkit.parse(file.read())["tool"]["yashiro"]
+                self.mapping.update(payload)
 
     def __call__(self):
         return self.template.render(self.mapping)
@@ -39,6 +45,7 @@ def parse_args():
         help="Print the version and exit",
     )
     parser.add_argument("-j", "--json", help="The path to the json file")
+    parser.add_argument("-o", "--toml", help="The path to the toml file")
     parser.add_argument(
         "-s", "--strict", action="store_true", help="Disallow missing arguments"
     )

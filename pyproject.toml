@@ -49,6 +49,7 @@ yashiro = "yashiro.main:write_output"
 python = "^3.6.0"
 
 jinja2 = "^2.0.0"
+tomlkit = "^0.7.0"
 
 [tool.poetry.dev-dependencies]
 black = {version = "*", allow-prereleases = true}
