@@ -1,3 +1,9 @@
+["$globals"]
+vars = [
+    {"pytest_args" = "--cov -vv"},
+    {"pytest_path" = "tests/"},
+]
+
 [all]
 alias = "install"
 
@@ -21,10 +27,9 @@ commands = [
 phony = true
 requires = ["install"]
 commands = [
+    "flake8 .",
     "isort --check .",
     "black --check .",
-    "flake8 .",
-    "mypy .",
 ]
 
 [tests]
