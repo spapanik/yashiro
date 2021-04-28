@@ -14,12 +14,7 @@ sections = ["STDLIB", "THIRDPARTY", "FIRSTPARTY", "TESTS"]
 
 [tool.pytest.ini_options]
 addopts = "--cov -vv"
-testpaths = [
-    "tests",
-]
-
-[tool.coverage.run]
-source = ["src/"]
+testpaths = "tests"
 
 [tool.poetry]
 name = "yashiro"
@@ -46,21 +41,16 @@ classifiers = [
 yashiro = "yashiro.main:write_output"
 
 [tool.poetry.dependencies]
-python = "^3.6.0"
+python = "^3.6.2"
 
 jinja2 = "^2.0.0"
 tomlkit = "^0.7.0"
 
 [tool.poetry.dev-dependencies]
-black = [
-    {version = "^20.8b1", python = "~3.6.0,<=3.6.1"},
-    {version = "^21.4b1", python = "^3.6.2"},
-]
+black = "^21.4b1"
 isort = "^5.8.0"
 
 pytest = "^6.2.0"
-pytest-cov = "^2.11.0"
-coveralls = "^3.0.0"
 
 ipython = [
     {version = "^7.16.0", python = "~3.6.0"},
