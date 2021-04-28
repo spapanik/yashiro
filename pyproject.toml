@@ -13,7 +13,7 @@ known_tests = "tests"
 sections = ["STDLIB", "THIRDPARTY", "FIRSTPARTY", "TESTS"]
 
 [tool.pytest.ini_options]
-addopts = "--cov -vv"
+addopts = "-vv"
 testpaths = "tests"
 
 [tool.poetry]
