@@ -18,7 +18,7 @@ testpaths = "tests"
 
 [tool.poetry]
 name = "yashiro"
-version = "0.5.0"
+version = "0.6.0"
 description = "A cli template tool based on jinja"
 authors = [
     "Stephanos Kuma <stephanos@kuma.ai>",

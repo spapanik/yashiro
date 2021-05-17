@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog][clog], and this project adheres to [Se
 
 ## [Unreleased]
 
+## [0.6.0] - 2021-05-17
 ### Removed
 - Drop support for python 3.6.0 and 3.6.1
 
@@ -32,7 +33,8 @@ The format is based on [Keep a Changelog][clog], and this project adheres to [Se
 - Added a template parser
 
 
-[unreleased]: https://github.com/spapanik/yashiro/compare/v0.5.0...main
+[unreleased]: https://github.com/spapanik/yashiro/compare/v0.6.0...main
+[0.6.0]: https://github.com/spapanik/yashiro/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/spapanik/yashiro/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/spapanik/yashiro/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/spapanik/yashiro/compare/v0.2.0...v0.3.0
