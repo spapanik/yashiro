@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog][clog], and this project adheres to [Se
 
 ## [Unreleased]
 
+### Removed
+- Drop support for python 3.6.0 and 3.6.1
+
+### Changed
+- Updated jinja2 version
+
 ## [0.5.0] - 2021-03-22
 ### Added
 - Added an option to allow variables in toml files

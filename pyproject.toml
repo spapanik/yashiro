@@ -43,7 +43,7 @@ yashiro = "yashiro.main:write_output"
 [tool.poetry.dependencies]
 python = "^3.6.2"
 
-jinja2 = "^2.0.0"
+jinja2 = "^3.0.0"
 tomlkit = "^0.7.0"
 
 [tool.poetry.dev-dependencies]
