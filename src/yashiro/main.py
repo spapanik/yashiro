@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+from typing import Any, Dict, cast
 
 import jinja2
 import tomlkit
@@ -11,8 +12,8 @@ from yashiro import __version__
 class Parser:
     __slots__ = ["template", "mapping"]
 
-    def __init__(self, args):
-        extra = {}
+    def __init__(self, args: argparse.Namespace):
+        extra: Dict[str, Any] = {}
         if args.strict:
             extra["undefined"] = jinja2.StrictUndefined
         with open(args.template) as file:
@@ -25,14 +26,15 @@ class Parser:
         toml_path = args.toml
         if toml_path is not None:
             with open(toml_path) as file:
-                payload = tomlkit.parse(file.read())["tool"]["yashiro"]
+                info = cast(Dict[str, Any], tomlkit.parse(file.read()))
+                payload = info["tool"]["yashiro"]
                 self.mapping.update(payload)
 
-    def __call__(self):
+    def __call__(self) -> str:
         return self.template.render(self.mapping)
 
 
-def parse_args():
+def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         prog="yashiro",
         description="A utility to manage testing and migrating a database",
@@ -56,11 +58,11 @@ def parse_args():
     return parser.parse_args()
 
 
-def get_output():
+def get_output() -> str:
     args = parse_args()
     parser = Parser(args)
     return parser()
 
 
-def write_output():
+def write_output() -> None:
     print(get_output())
