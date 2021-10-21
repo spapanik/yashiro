@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog][clog], and this project adheres to [Se
 
 ## [Unreleased]
 
+### Added
+- Added python310 support
+
 ## [0.6.0] - 2021-05-17
 ### Removed
 - Drop support for python 3.6.0 and 3.6.1
