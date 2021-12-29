@@ -34,7 +34,7 @@ The easiest way is to use `poetry`_ to manage your dependencies and add *yashiro
 .. code-block:: toml
 
     [tool.poetry.dependencies]
-    yashiro = "^0.1.0"
+    yashiro = "*"
 
 Usage
 ^^^^^
