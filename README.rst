@@ -64,5 +64,5 @@ Links
 
 
 .. _poetry: https://python-poetry.org/
-.. _Changelog: https://github.com/spapanik/dj_settings/blob/main/CHANGELOG.rst
-.. _Documentation: https://dj-settings.readthedocs.io/en/latest/
+.. _Changelog: https://github.com/spapanik/yashiro/blob/main/CHANGELOG.rst
+.. _Documentation: https://yashiro.readthedocs.io/en/latest/
