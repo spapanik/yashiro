@@ -9,6 +9,9 @@ The format is based on `Keep a Changelog`_, and this project adheres to `Semanti
 `Unreleased`_
 -------------
 
+`0.8.0`_ - 2022-01-10
+---------------------
+
 Removed
 ^^^^^^^
 * Removed changelog from the published wheel
@@ -71,7 +74,8 @@ Added
 * Added a template parser
 
 
-.. _`unreleased`: https://github.com/spapanik/yashiro/compare/v0.6.0...main
+.. _`unreleased`: https://github.com/spapanik/yashiro/compare/v0.8.0...main
+.. _`0.8.0`: https://github.com/spapanik/yashiro/compare/v0.7.0...v0.8.0
 .. _`0.7.0`: https://github.com/spapanik/yashiro/compare/v0.6.0...v0.7.0
 .. _`0.6.0`: https://github.com/spapanik/yashiro/compare/v0.5.0...v0.6.0
 .. _`0.5.0`: https://github.com/spapanik/yashiro/compare/v0.4.0...v0.5.0
