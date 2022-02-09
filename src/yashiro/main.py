@@ -1,10 +1,10 @@
 import argparse
 import json
 import os
-from typing import Any, Dict, cast
+from typing import Any, Dict
 
 import jinja2
-import tomlkit
+import tomli
 
 from yashiro import __version__
 
@@ -25,8 +25,8 @@ class Parser:
                 self.mapping.update(json.load(file))
         toml_path = args.toml
         if toml_path is not None:
-            with open(toml_path) as file:
-                info = cast(Dict[str, Any], tomlkit.parse(file.read()))
+            with open(toml_path, "rb") as binary_file:
+                info = tomli.load(binary_file)
                 payload = info["tool"]["yashiro"]
                 self.mapping.update(payload)
 
