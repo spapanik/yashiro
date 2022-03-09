@@ -12,6 +12,8 @@ The format is based on `Keep a Changelog`_, and this project adheres to `Semanti
 Changed
 ^^^^^^^
 * Change toml parser to tomli
+* Use dj_settings to parse the mappings file
+* Replaced -j/--json and -o/--toml flags with a single -m/--mapping one
 
 `0.8.0`_ - 2022-01-10
 ---------------------

@@ -11,10 +11,10 @@ You can use yashiro to parse a template.
 
 .. code:: console
 
-    usage: yashiro [-h] [-j JSON] [-t TEMPLATE] [-V]
+    usage: yashiro [-h] [-V] [-m MAPPING] [-s] -t TEMPLATE
 
     optional arguments:
         -h, --help             Show this help message and exit
-        -j/--json JSON         The path to the json file
+        -m/--mappings MAPPINGS The path to the file that contains the mappings
         -t/--template TEMPLATE The path to the template
         -V/--version           Print the version and exit

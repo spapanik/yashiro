@@ -1,10 +1,10 @@
 import argparse
-import json
 import os
+from pathlib import Path
 from typing import Any, Dict
 
 import jinja2
-import tomli
+from dj_settings.utils import FileReader
 
 from yashiro import __version__
 
@@ -19,16 +19,9 @@ class Parser:
         with open(args.template) as file:
             self.template = jinja2.Template(file.read(), **extra)
         self.mapping = dict(os.environ)
-        json_path = args.json
-        if json_path is not None:
-            with open(json_path) as file:
-                self.mapping.update(json.load(file))
-        toml_path = args.toml
-        if toml_path is not None:
-            with open(toml_path, "rb") as binary_file:
-                info = tomli.load(binary_file)
-                payload = info["tool"]["yashiro"]
-                self.mapping.update(payload)
+        mappings_file = args.mappings
+        if mappings_file is not None:
+            self.mapping.update(FileReader(Path(mappings_file)).data)
 
     def __call__(self) -> str:
         return self.template.render(self.mapping)
@@ -46,8 +39,9 @@ def parse_args() -> argparse.Namespace:
         version=f"%(prog)s {__version__}",
         help="Print the version and exit",
     )
-    parser.add_argument("-j", "--json", help="The path to the json file")
-    parser.add_argument("-o", "--toml", help="The path to the toml file")
+    parser.add_argument(
+        "-m", "--mappings", help="The path to the file that contains the mappings"
+    )
     parser.add_argument(
         "-s", "--strict", action="store_true", help="Disallow missing arguments"
     )
