@@ -21,7 +21,8 @@ class Parser:
         self.mapping = dict(os.environ)
         mappings_file = args.mappings
         if mappings_file is not None:
-            self.mapping.update(FileReader(Path(mappings_file)).data)
+            data = FileReader(Path(mappings_file)).data
+            self.mapping.update(data.get("yashiro", {}))
 
     def __call__(self) -> str:
         return self.template.render(self.mapping)
