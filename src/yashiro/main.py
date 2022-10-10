@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Any, Dict
 
 import jinja2
-from dj_settings.utils import FileReader
+from dj_settings import SettingsParser
 
 from yashiro import __version__
 
@@ -21,7 +21,7 @@ class Parser:
         self.mapping = dict(os.environ)
         mappings_file = args.mappings
         if mappings_file is not None:
-            data = FileReader(Path(mappings_file)).data
+            data = SettingsParser(Path(mappings_file)).data
             self.mapping.update(data.get("yashiro", {}))
 
     def __call__(self) -> str:
