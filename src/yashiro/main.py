@@ -1,7 +1,9 @@
+from __future__ import annotations
+
 import argparse
 import os
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any
 
 import jinja2
 from dj_settings import SettingsParser
@@ -13,7 +15,7 @@ class Parser:
     __slots__ = ["template", "mapping"]
 
     def __init__(self, args: argparse.Namespace):
-        extra: Dict[str, Any] = {}
+        extra: dict[str, Any] = {}
         if args.strict:
             extra["undefined"] = jinja2.StrictUndefined
         with open(args.template) as file:

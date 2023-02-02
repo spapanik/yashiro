@@ -5,9 +5,6 @@ yashiro: A template CLI tool based on jinja
 .. image:: https://github.com/spapanik/yashiro/actions/workflows/build.yml/badge.svg
   :alt: Build
   :target: https://github.com/spapanik/yashiro/actions/workflows/build.yml
-.. image:: https://img.shields.io/lgtm/alerts/g/spapanik/yashiro.svg
-  :alt: Total alerts
-  :target: https://lgtm.com/projects/g/spapanik/yashiro/alerts/
 .. image:: https://img.shields.io/github/license/spapanik/yashiro
   :alt: License
   :target: https://github.com/spapanik/yashiro/blob/main/LICENSE.txt
