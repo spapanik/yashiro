@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import os
 from pathlib import Path
-from typing import Any
 
 import jinja2
 from dj_settings import SettingsParser
@@ -15,11 +14,9 @@ class Parser:
     __slots__ = ["template", "mapping"]
 
     def __init__(self, args: argparse.Namespace):
-        extra: dict[str, Any] = {}
-        if args.strict:
-            extra["undefined"] = jinja2.StrictUndefined
-        with open(args.template) as file:
-            self.template = jinja2.Template(file.read(), **extra)
+        raw_template = args.template.read_text()
+        undefined = jinja2.StrictUndefined if args.strict else jinja2.Undefined
+        self.template = jinja2.Template(raw_template, undefined=undefined)
         self.mapping = dict(os.environ)
         mappings_file = args.mappings
         if mappings_file is not None:
@@ -43,13 +40,16 @@ def parse_args() -> argparse.Namespace:
         help="Print the version and exit",
     )
     parser.add_argument(
-        "-m", "--mappings", help="The path to the file that contains the mappings"
+        "-m",
+        "--mappings",
+        type=Path,
+        help="The path to the file that contains the mappings",
     )
     parser.add_argument(
         "-s", "--strict", action="store_true", help="Disallow missing arguments"
     )
     parser.add_argument(
-        "-t", "--template", required=True, help="The path to the template"
+        "-t", "--template", required=True, type=Path, help="The path to the template"
     )
 
     return parser.parse_args()
