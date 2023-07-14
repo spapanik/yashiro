@@ -1,11 +1,12 @@
-import pathlib
+from collections.abc import Callable
+from pathlib import Path
 
 import pytest
 
 
 @pytest.fixture()
-def data_path():
-    def _data_path(path):
-        return pathlib.Path(__file__).parent.joinpath("data").joinpath(path)
+def data_path() -> Callable[[str], Path]:
+    def _data_path(path: str) -> Path:
+        return Path(__file__).parent.joinpath("data").joinpath(path)
 
     return _data_path

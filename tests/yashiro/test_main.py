@@ -1,4 +1,6 @@
 import os
+from collections.abc import Callable
+from pathlib import Path
 from unittest import mock
 
 from yashiro import main
@@ -7,7 +9,9 @@ from yashiro import main
 class TestMain:
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
-    def test_parser_with_toml(mocked_args_parser, data_path):
+    def test_parser_with_toml(
+        mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
+    ) -> None:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.mappings = data_path("test.toml")
@@ -18,7 +22,9 @@ class TestMain:
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
-    def test_parser_with_json(mocked_args_parser, data_path):
+    def test_parser_with_json(
+        mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
+    ) -> None:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.mappings = data_path("test.json")
@@ -29,7 +35,9 @@ class TestMain:
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
-    def test_parser_with_yaml(mocked_args_parser, data_path):
+    def test_parser_with_yaml(
+        mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
+    ) -> None:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.mappings = data_path("test.yml")
@@ -40,7 +48,9 @@ class TestMain:
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
-    def test_parser_with_ini(mocked_args_parser, data_path):
+    def test_parser_with_ini(
+        mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
+    ) -> None:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.mappings = data_path("test.ini")
@@ -51,7 +61,9 @@ class TestMain:
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
-    def test_parser_with_env_vars(mocked_args_parser, data_path):
+    def test_parser_with_env_vars(
+        mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
+    ) -> None:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.mappings = None
@@ -64,7 +76,9 @@ class TestMain:
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
-    def test_parser_with_env_vars_and_json(mocked_args_parser, data_path):
+    def test_parser_with_env_vars_and_json(
+        mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
+    ) -> None:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.mappings = data_path("test.json")
@@ -77,7 +91,9 @@ class TestMain:
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
-    def test_parser_with_env_vars_and_toml(mocked_args_parser, data_path):
+    def test_parser_with_env_vars_and_toml(
+        mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
+    ) -> None:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.mappings = data_path("test.toml")
@@ -90,7 +106,9 @@ class TestMain:
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
-    def test_parser_with_env_vars_and_yaml(mocked_args_parser, data_path):
+    def test_parser_with_env_vars_and_yaml(
+        mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
+    ) -> None:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.mappings = data_path("test.yml")
@@ -103,7 +121,9 @@ class TestMain:
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
-    def test_parser_with_env_vars_and_ini(mocked_args_parser, data_path):
+    def test_parser_with_env_vars_and_ini(
+        mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
+    ) -> None:
         args = mocked_args_parser()
         args.template = data_path("test.template")
         args.mappings = data_path("test.ini")
