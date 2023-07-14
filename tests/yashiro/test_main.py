@@ -57,8 +57,8 @@ class TestMain:
         args.mappings = None
         args.strict = False
         os.environ.clear()
-        os.environ["that"] = "3.14159"
-        os.environ["the_other"] = "Hello, world!"
+        os.environ["THAT"] = "3.14159"
+        os.environ["THE_OTHER"] = "Hello, world!"
         expected = "Three cards:\n1. \n2. 3.14159\n3. Hello, world!"
         assert main.get_output() == expected
 
@@ -70,8 +70,8 @@ class TestMain:
         args.mappings = data_path("test.json")
         args.strict = False
         os.environ.clear()
-        os.environ["that"] = "3.14159"
-        os.environ["the_other"] = "Hello, world!"
+        os.environ["THAT"] = "3.14159"
+        os.environ["THE_OTHER"] = "Hello, world!"
         expected = "Three cards:\n1. None\n2. 42\n3. missing"
         assert main.get_output() == expected
 
@@ -83,8 +83,8 @@ class TestMain:
         args.mappings = data_path("test.toml")
         args.strict = False
         os.environ.clear()
-        os.environ["that"] = "3.14159"
-        os.environ["the_other"] = "Hello, world!"
+        os.environ["THAT"] = "3.14159"
+        os.environ["THE_OTHER"] = "Hello, world!"
         expected = "Three cards:\n1. False\n2. 42\n3. missing"
         assert main.get_output() == expected
 
@@ -96,8 +96,8 @@ class TestMain:
         args.mappings = data_path("test.yml")
         args.strict = False
         os.environ.clear()
-        os.environ["that"] = "3.14159"
-        os.environ["the_other"] = "Hello, world!"
+        os.environ["THAT"] = "3.14159"
+        os.environ["THE_OTHER"] = "Hello, world!"
         expected = "Three cards:\n1. False\n2. 42\n3. missing"
         assert main.get_output() == expected
 
@@ -109,7 +109,7 @@ class TestMain:
         args.mappings = data_path("test.ini")
         args.strict = False
         os.environ.clear()
-        os.environ["that"] = "3.14159"
-        os.environ["the_other"] = "Hello, world!"
+        os.environ["THAT"] = "3.14159"
+        os.environ["THE_OTHER"] = "Hello, world!"
         expected = "Three cards:\n1. False\n2. 42\n3. missing"
         assert main.get_output() == expected

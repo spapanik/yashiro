@@ -1,7 +1,7 @@
 {
     "yashiro": {
-        "this": null,
-        "that": 42,
-        "the_other": "missing"
+        "THIS": null,
+        "THAT": 42,
+        "THE_OTHER": "missing"
     }
 }
