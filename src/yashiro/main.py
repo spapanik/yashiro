@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 
 import jinja2
-from dj_settings import SettingsParser
+from dj_settings import ConfigParser
 
 from yashiro import __version__
 
@@ -20,7 +20,7 @@ class Parser:
         self.mapping = dict(os.environ)
         mappings_file = args.mappings
         if mappings_file is not None:
-            data = SettingsParser(Path(mappings_file)).data
+            data = ConfigParser([Path(mappings_file)]).data
             self.mapping.update(data.get("yashiro", {}))
 
     def __call__(self) -> str:
