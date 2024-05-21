@@ -21,7 +21,7 @@ class Parser:
         mappings_file = args.mappings
         if mappings_file is not None:
             data = ConfigParser([Path(mappings_file)]).data
-            self.mapping.update(data.get("yashiro", {}))
+            self.mapping |= data.get("yashiro", {})
 
     def __call__(self) -> str:
         return self.template.render(self.mapping)
