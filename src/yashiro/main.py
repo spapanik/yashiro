@@ -7,7 +7,7 @@ from pathlib import Path
 import jinja2
 from dj_settings import ConfigParser
 
-from yashiro import __version__
+from yashiro.__version__ import __version__
 
 
 class Parser:
