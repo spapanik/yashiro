@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 target-version = [
-    "py311",
+    "py38",
 ]
 
 [tool.mypy]
@@ -32,7 +32,7 @@ warn_unused_configs = true
 src = [
     "src",
 ]
-target-version = "py311"
+target-version = "py38"
 
 [tool.ruff.lint]
 select = [
@@ -153,7 +153,7 @@ yashiro = "yashiro.__main__:main"
 
 [tool.poetry.dependencies]
 # python version
-python = "^3.11"
+python = "^3.8"
 
 # dependencies
 dj_settings = "^5.0"
