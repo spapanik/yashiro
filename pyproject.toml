@@ -149,7 +149,7 @@ classifiers = [
 ]
 
 [tool.poetry.scripts]
-yashiro = "yashiro.main:write_output"
+yashiro = "yashiro.__main__:write_output"
 
 [tool.poetry.dependencies]
 # python version

@@ -5,7 +5,7 @@ from collections.abc import Callable
 from pathlib import Path
 from unittest import mock
 
-from yashiro import main
+from yashiro import __main__
 
 
 class TestMain:
@@ -20,7 +20,7 @@ class TestMain:
         args.strict = False
         os.environ.clear()
         expected = "Three cards:\n1. False\n2. 42\n3. missing"
-        assert main.get_output() == expected
+        assert __main__.get_output() == expected
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
@@ -33,7 +33,7 @@ class TestMain:
         args.strict = False
         os.environ.clear()
         expected = "Three cards:\n1. None\n2. 42\n3. missing"
-        assert main.get_output() == expected
+        assert __main__.get_output() == expected
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
@@ -46,7 +46,7 @@ class TestMain:
         args.strict = False
         os.environ.clear()
         expected = "Three cards:\n1. False\n2. 42\n3. missing"
-        assert main.get_output() == expected
+        assert __main__.get_output() == expected
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
@@ -59,7 +59,7 @@ class TestMain:
         args.strict = False
         os.environ.clear()
         expected = "Three cards:\n1. False\n2. 42\n3. missing"
-        assert main.get_output() == expected
+        assert __main__.get_output() == expected
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
@@ -74,7 +74,7 @@ class TestMain:
         os.environ["THAT"] = "3.14159"
         os.environ["THE_OTHER"] = "Hello, world!"
         expected = "Three cards:\n1. \n2. 3.14159\n3. Hello, world!"
-        assert main.get_output() == expected
+        assert __main__.get_output() == expected
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
@@ -89,7 +89,7 @@ class TestMain:
         os.environ["THAT"] = "3.14159"
         os.environ["THE_OTHER"] = "Hello, world!"
         expected = "Three cards:\n1. None\n2. 42\n3. missing"
-        assert main.get_output() == expected
+        assert __main__.get_output() == expected
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
@@ -104,7 +104,7 @@ class TestMain:
         os.environ["THAT"] = "3.14159"
         os.environ["THE_OTHER"] = "Hello, world!"
         expected = "Three cards:\n1. False\n2. 42\n3. missing"
-        assert main.get_output() == expected
+        assert __main__.get_output() == expected
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
@@ -119,7 +119,7 @@ class TestMain:
         os.environ["THAT"] = "3.14159"
         os.environ["THE_OTHER"] = "Hello, world!"
         expected = "Three cards:\n1. False\n2. 42\n3. missing"
-        assert main.get_output() == expected
+        assert __main__.get_output() == expected
 
     @staticmethod
     @mock.patch("yashiro.main.parse_args")
@@ -134,4 +134,4 @@ class TestMain:
         os.environ["THAT"] = "3.14159"
         os.environ["THE_OTHER"] = "Hello, world!"
         expected = "Three cards:\n1. False\n2. 42\n3. missing"
-        assert main.get_output() == expected
+        assert __main__.get_output() == expected
