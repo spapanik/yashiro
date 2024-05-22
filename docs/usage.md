@@ -10,11 +10,17 @@ recommendations for command line interfaces, and offers:
 You can use yashiro to parse a template.
 
 ```console
-usage: yashiro [-h] [-V] [-m MAPPING] [-s] -t TEMPLATE
+usage: yashiro [-h] [-V] [-v] [-m mapping] [-s] template
 
-optional arguments:
-    -h, --help             Show this help message and exit
-    -m/--mappings MAPPINGS The path to the file that contains the mappings
-    -t/--template TEMPLATE The path to the template
-    -V/--version           Print the version and exit
+Jinja2's missing CLI interface
+
+positional arguments:
+  template              The path to the template
+
+options:
+  -h/--help             show this help message and exit
+  -V/--version          print the version and exit
+  -v/--verbose          increase the level of verbosity
+  -m/--mapping mapping  the path to the file that contains the extra mapping
+  -s/--strict           disallow missing arguments
 ```
