@@ -7,7 +7,7 @@ from pathlib import Path
 import jinja2
 from dj_settings import ConfigParser
 
-from yashiro.__version__ import __version__
+from yashiro.lib.parser import parse_args
 
 
 class Parser:
@@ -25,34 +25,6 @@ class Parser:
 
     def __call__(self) -> str:
         return self.template.render(self.mapping)
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        prog="yashiro",
-        description="A utility to manage testing and migrating a database",
-    )
-    parser.add_argument(
-        "-V",
-        "--version",
-        action="version",
-        version=f"%(prog)s {__version__}",
-        help="Print the version and exit",
-    )
-    parser.add_argument(
-        "-m",
-        "--mappings",
-        type=Path,
-        help="The path to the file that contains the mappings",
-    )
-    parser.add_argument(
-        "-s", "--strict", action="store_true", help="Disallow missing arguments"
-    )
-    parser.add_argument(
-        "-t", "--template", required=True, type=Path, help="The path to the template"
-    )
-
-    return parser.parse_args()
 
 
 def get_output() -> str:
