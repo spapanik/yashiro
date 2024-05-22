@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog], and this project adheres to [Semantic
 
 ## [Unreleased]()
 
+### Changed
+
+-   Changed template to be a positional instead of an optional cli arg
+
 ### Removed
 
 -   Dropped python 3.7 support

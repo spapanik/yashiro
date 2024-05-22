@@ -10,14 +10,14 @@ sys.tracebacklimit = 0
 def parse_args() -> Namespace:
     parser = ArgumentParser(
         prog="yashiro",
-        description="A utility to manage testing and migrating a database",
+        description="Jinja2's missing CLI interface",
     )
     parser.add_argument(
         "-V",
         "--version",
         action="version",
         version=f"%(prog)s {__version__}",
-        help="Print the version and exit",
+        help="print the version and exit",
     )
 
     parser.add_argument(
@@ -29,17 +29,17 @@ def parse_args() -> Namespace:
         help="increase the level of verbosity",
     )
 
+    parser.add_argument("template", type=Path, help="The path to the template")
+
     parser.add_argument(
         "-m",
-        "--mappings",
+        "--mapping",
+        metavar="mapping",
         type=Path,
-        help="The path to the file that contains the mappings",
+        help="the path to the file that contains the extra mapping",
     )
     parser.add_argument(
-        "-s", "--strict", action="store_true", help="Disallow missing arguments"
-    )
-    parser.add_argument(
-        "-t", "--template", required=True, type=Path, help="The path to the template"
+        "-s", "--strict", action="store_true", help="disallow missing arguments"
     )
 
     args = parser.parse_args()
