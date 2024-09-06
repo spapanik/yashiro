@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import os
-from collections.abc import Callable
-from pathlib import Path
+from typing import TYPE_CHECKING
 from unittest import mock
 
 from yashiro.command.yashiro import Command
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
+    from pathlib import Path
 
 
 class TestCommand:
