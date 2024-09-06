@@ -17,7 +17,7 @@
 
 [test_badge]: https://github.com/spapanik/yashiro/actions/workflows/tests.yml/badge.svg
 [test_url]: https://github.com/spapanik/yashiro/actions/workflows/tests.yml
-[licence_badge]: https://img.shields.io/badge/License-LGPL_v3-blue.svg
+[licence_badge]: https://img.shields.io/pypi/l/yashiro
 [licence_url]: https://github.com/spapanik/yashiro/blob/main/docs/LICENSE.md
 [pypi_badge]: https://img.shields.io/pypi/v/yashiro
 [pypi_url]: https://pypi.org/project/yashiro
