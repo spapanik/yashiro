@@ -5,7 +5,6 @@ __pycache__/
 .ruff_cache/
 .cov_cache/
 
-
 # installation/build artifacts
 .yamk/
 dist/
