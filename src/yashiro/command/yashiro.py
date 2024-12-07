@@ -8,7 +8,7 @@ from dj_settings import ConfigParser
 
 
 class Command:
-    __slots__ = ("template", "mapping")
+    __slots__ = ("mapping", "template")
 
     def __init__(self, template: Path, mapping: Path | None, *, strict: bool) -> None:
         raw_template = template.read_text()
@@ -23,4 +23,4 @@ class Command:
         return self.template.render(self.mapping)
 
     def write(self) -> None:
-        print(self.render())
+        print(self.render())  # noqa: T201
