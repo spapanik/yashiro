@@ -24,7 +24,7 @@
 [test_badge]: https://github.com/spapanik/yashiro/actions/workflows/tests.yml/badge.svg
 [test_url]: https://github.com/spapanik/yashiro/actions/workflows/tests.yml
 [licence_badge]: https://img.shields.io/pypi/l/yashiro
-[licence_url]: https://github.com/spapanik/yashiro/blob/main/docs/LICENSE.md
+[licence_url]: https://yashiro.readthedocs.io/en/stable/LICENSE/
 [pypi_badge]: https://img.shields.io/pypi/v/yashiro
 [pypi_url]: https://pypi.org/project/yashiro
 [pepy_badge]: https://pepy.tech/badge/yashiro
@@ -36,4 +36,4 @@
 [ruff_badge]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json
 [ruff_url]: https://github.com/charliermarsh/ruff
 [Documentation]: https://yashiro.readthedocs.io/en/stable/
-[Changelog]: https://github.com/spapanik/yashiro/blob/main/docs/CHANGELOG.md
+[Changelog]: https://yashiro.readthedocs.io/en/stable/CHANGELOG/
