@@ -147,3 +147,15 @@ class TestCommand:
         expected = "Three cards:\n1. False\n2. 42\n3. missing"
         command = Command(args.template, args.mappings, strict=args.strict)
         assert command.render() == expected
+
+
+def test_command_write(
+    capsys: mock.MagicMock, data_path: Callable[[str], Path]
+) -> None:
+    template = data_path("test.template")
+    mappings = data_path("test.toml")
+    command = Command(template, mappings, strict=False)
+    command.write()
+    captured = capsys.readouterr()
+    assert captured.out == "Three cards:\n1. False\n2. 42\n3. missing\n"
+    assert captured.err == ""
