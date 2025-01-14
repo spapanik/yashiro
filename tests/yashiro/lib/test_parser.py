@@ -4,7 +4,7 @@ from unittest import mock
 
 import pytest
 
-from yashiro.lib.parser import parse_args
+from yashiro.lib.cli import parse_args
 
 
 @pytest.mark.parametrize(

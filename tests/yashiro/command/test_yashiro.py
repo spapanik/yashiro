@@ -13,7 +13,7 @@ if TYPE_CHECKING:
 
 class TestCommand:
     @staticmethod
-    @mock.patch("yashiro.lib.parser.parse_args")
+    @mock.patch("yashiro.lib.cli.parse_args")
     def test_parser_with_toml(
         mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
     ) -> None:
@@ -27,7 +27,7 @@ class TestCommand:
         assert command.render() == expected
 
     @staticmethod
-    @mock.patch("yashiro.lib.parser.parse_args")
+    @mock.patch("yashiro.lib.cli.parse_args")
     def test_parser_with_json(
         mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
     ) -> None:
@@ -41,7 +41,7 @@ class TestCommand:
         assert command.render() == expected
 
     @staticmethod
-    @mock.patch("yashiro.lib.parser.parse_args")
+    @mock.patch("yashiro.lib.cli.parse_args")
     def test_parser_with_yaml(
         mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
     ) -> None:
@@ -55,7 +55,7 @@ class TestCommand:
         assert command.render() == expected
 
     @staticmethod
-    @mock.patch("yashiro.lib.parser.parse_args")
+    @mock.patch("yashiro.lib.cli.parse_args")
     def test_parser_with_ini(
         mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
     ) -> None:
@@ -69,7 +69,7 @@ class TestCommand:
         assert command.render() == expected
 
     @staticmethod
-    @mock.patch("yashiro.lib.parser.parse_args")
+    @mock.patch("yashiro.lib.cli.parse_args")
     def test_parser_with_env_vars(
         mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
     ) -> None:
@@ -85,7 +85,7 @@ class TestCommand:
         assert command.render() == expected
 
     @staticmethod
-    @mock.patch("yashiro.lib.parser.parse_args")
+    @mock.patch("yashiro.lib.cli.parse_args")
     def test_parser_with_env_vars_and_json(
         mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
     ) -> None:
@@ -101,7 +101,7 @@ class TestCommand:
         assert command.render() == expected
 
     @staticmethod
-    @mock.patch("yashiro.lib.parser.parse_args")
+    @mock.patch("yashiro.lib.cli.parse_args")
     def test_parser_with_env_vars_and_toml(
         mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
     ) -> None:
@@ -117,7 +117,7 @@ class TestCommand:
         assert command.render() == expected
 
     @staticmethod
-    @mock.patch("yashiro.lib.parser.parse_args")
+    @mock.patch("yashiro.lib.cli.parse_args")
     def test_parser_with_env_vars_and_yaml(
         mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
     ) -> None:
@@ -133,7 +133,7 @@ class TestCommand:
         assert command.render() == expected
 
     @staticmethod
-    @mock.patch("yashiro.lib.parser.parse_args")
+    @mock.patch("yashiro.lib.cli.parse_args")
     def test_parser_with_env_vars_and_ini(
         mocked_args_parser: mock.MagicMock, data_path: Callable[[str], Path]
     ) -> None:

@@ -1,5 +1,5 @@
 from yashiro.command.yashiro import Command
-from yashiro.lib.parser import parse_args
+from yashiro.lib.cli import parse_args
 
 
 def main() -> None:
