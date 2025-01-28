@@ -8,10 +8,7 @@ sys.tracebacklimit = 0
 
 
 def parse_args() -> Namespace:
-    parser = ArgumentParser(
-        prog="yashiro",
-        description="Jinja2's missing CLI interface",
-    )
+    parser = ArgumentParser(description="Jinja2's missing CLI interface")
     parser.add_argument(
         "-V",
         "--version",

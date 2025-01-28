@@ -1,7 +1,7 @@
 # Usage
 
 `yashiro`, once installed offers a single command, `yashiro`, that
-parses the templated based on a JSON file. `yashiro` follows the GNU
+parses the templated based on a mappings file. `yashiro` follows the GNU
 recommendations for command line interfaces, and offers:
 
 -   `-h` or `--help` to print help, and
