@@ -16,8 +16,8 @@
 
 ## Links
 
--   [Documentation]
--   [Changelog]
+- [Documentation]
+- [Changelog]
 
 [build_badge]: https://github.com/spapanik/yashiro/actions/workflows/build.yml/badge.svg
 [build_url]: https://github.com/spapanik/yashiro/actions/workflows/build.yml

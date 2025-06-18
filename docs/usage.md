@@ -4,8 +4,8 @@
 parses the templated based on a mappings file. `yashiro` follows the GNU
 recommendations for command line interfaces, and offers:
 
--   `-h` or `--help` to print help, and
--   `-V` or `--version` to print the version
+- `-h` or `--help` to print help, and
+- `-V` or `--version` to print the version
 
 You can use yashiro to parse a template.
 
