@@ -11,7 +11,7 @@ is preferred.
 To install `yashiro` using uv, run the following command in your terminal:
 
 ```console
-$ uv tool install --python 3.13 yashiro
+$ uv tool install --python 3.14 yashiro
 ```
 
 [uv]: https://github.com/astral-sh/uv
