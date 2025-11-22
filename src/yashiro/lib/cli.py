@@ -1,5 +1,6 @@
 import sys
-from argparse import ArgumentParser, Namespace
+from argparse import ArgumentParser
+from dataclasses import dataclass
 from pathlib import Path
 
 from yashiro.__version__ import __version__
@@ -7,7 +8,15 @@ from yashiro.__version__ import __version__
 sys.tracebacklimit = 0
 
 
-def parse_args() -> Namespace:
+@dataclass
+class CLIArgs:
+    template: Path
+    mapping: Path | None
+    strict: bool
+    verbosity: int
+
+
+def parse_args() -> CLIArgs:
     parser = ArgumentParser(description="Jinja2's missing CLI interface")
     parser.add_argument(
         "-V",
@@ -43,4 +52,9 @@ def parse_args() -> Namespace:
     if args.verbosity > 0:
         sys.tracebacklimit = 1000
 
-    return args
+    return CLIArgs(
+        template=args.template,
+        mapping=args.mapping,
+        strict=args.strict,
+        verbosity=args.verbosity,
+    )
