@@ -16,7 +16,7 @@ class Command:
         self.template = jinja2.Template(raw_template, undefined=undefined)
         self.mapping = dict(os.environ)
         if mapping is not None:
-            data = ConfigParser([Path(mapping)]).data
+            data = ConfigParser(Path(mapping)).data
             self.mapping |= data.get("yashiro", {})
 
     def render(self) -> str:

@@ -27,7 +27,7 @@ classifiers = [
 
 requires-python = ">=3.11"
 dependencies = [
-    "dj_settings~=8.0",
+    "dj_settings~=9.0",
     "jinja2~=3.1",
 ]
 
