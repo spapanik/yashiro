@@ -5,13 +5,13 @@
 We recommend using [uv] for the installation of `yashiro` as it provides
 an isolated environment for the package, preventing any dependency conflicts.
 
-The minimum python version needed is `3.10` but as uv is used, version 3.13
-is preferred.
+The minimum Python version needed is `3.11`. When installing with uv, Python
+`3.15` is recommended.
 
 To install `yashiro` using uv, run the following command in your terminal:
 
 ```console
-$ uv tool install --python 3.14 yashiro
+$ uv tool install --python 3.15 yashiro
 ```
 
 [uv]: https://github.com/astral-sh/uv

@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog], and this project adheres to [Semantic
 
 ## Added
 
-- Added python 3.10 support
+- Added python 3.15 support
 
 ## [0.10.0] - 2025-01-28
 
